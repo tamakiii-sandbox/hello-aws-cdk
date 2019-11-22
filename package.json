@@ -1,23 +1,27 @@
 {
-  "name": "hello-aws-cdk",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "hello",
+  "version": "0.1.0",
+  "bin": {
+    "hello": "bin/hello.js"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "watch": "tsc -w",
+    "test": "jest",
+    "cdk": "cdk"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/tamakiii-sandbox/hello-aws-cdk.git"
+  "devDependencies": {
+    "@aws-cdk/assert": "^1.17.1",
+    "@types/jest": "^24.0.22",
+    "@types/node": "10.17.5",
+    "jest": "^24.9.0",
+    "ts-jest": "^24.1.0",
+    "aws-cdk": "^1.17.1",
+    "ts-node": "^8.1.0",
+    "typescript": "~3.7.2"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/tamakiii-sandbox/hello-aws-cdk/issues"
-  },
-  "homepage": "https://github.com/tamakiii-sandbox/hello-aws-cdk#readme",
   "dependencies": {
-    "aws-cdk": "^1.17.1"
+    "@aws-cdk/core": "^1.17.1",
+    "source-map-support": "^0.5.16"
   }
 }

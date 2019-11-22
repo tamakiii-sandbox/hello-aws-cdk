@@ -1,0 +1,25 @@
+{
+  "version": "1.16.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "HelloStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "HelloStack.template.json"
+      }
+    }
+  },
+  "runtime": {
+    "libraries": {
+      "@aws-cdk/core": "1.17.1",
+      "@aws-cdk/cx-api": "1.17.1",
+      "jsii-runtime": "node.js/v12.12.0"
+    }
+  }
+}

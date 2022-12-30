@@ -1,4 +1,7 @@
-.PHONY: help
+.PHONY: help info build watch test deploy diff synth
+
+export AWS_PROFILE := $(shell grep 'AWS_PROFILE' .env | awk -F= '{print $$2}')
+export AWS_REGION := $(shell grep 'AWS_REGION' .env | awk -F= '{print $$2}')
 
 help:
 	@cat $(firstword $(MAKEFILE_LIST))
